@@ -1,0 +1,27 @@
+:root {
+    --background: #1d2023;
+    --title-color: #c6c0ff;
+    --url-color: #c8c4d4;
+    --url-selected-color: #c6c0ff;
+}
+
+.navbar-container {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1vw;
+}
+
+.title {
+    color: var(--title-color);
+    font-size: 28px;
+    margin-right: 5vw;
+}
+
+.url {
+    color: var(--url-color);
+    padding-left: 2vw;
+    padding-right: 2vm;
+    font-size: 18px;
+}

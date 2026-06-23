@@ -1,0 +1,292 @@
+.jui-auth-page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface-container-lowest);
+    background-image:
+        linear-gradient(180deg, color-mix(in srgb, var(--outline-variant) 8%, transparent), transparent 8%),
+        linear-gradient(0deg, color-mix(in srgb, var(--outline-variant) 8%, transparent), transparent 8%);
+    padding: var(--space-lg);
+    box-sizing: border-box;
+}
+
+.jui-auth-page *,
+.jui-auth-page *::before,
+.jui-auth-page *::after {
+    box-sizing: border-box;
+}
+
+/* --------------------------------- Card ---------------------------------- */
+
+.jui-auth-card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--surface-container);
+    border: 1px solid color-mix(in srgb, var(--outline-variant) 30%, transparent);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: 0 24px 48px -16px rgba(0, 0, 0, 0.5);
+}
+
+/* -------------------------------- Header --------------------------------- */
+
+.jui-auth-header {
+    background: var(--surface-container-low);
+    border-bottom: 1px solid color-mix(in srgb, var(--outline-variant) 30%, transparent);
+    padding: 28px var(--space-lg) 22px;
+    text-align: center;
+}
+
+.jui-auth-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+.jui-auth-icon {
+    display: inline-flex;
+    color: var(--primary);
+    line-height: 0;
+}
+
+.jui-auth-title {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: var(--on-surface);
+}
+
+.jui-auth-subtitle {
+    margin: 6px 0 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--on-surface-variant);
+}
+
+/* ---------------------------------- Tabs ---------------------------------- */
+
+.jui-auth-tabs {
+    display: flex;
+    border-bottom: 1px solid color-mix(in srgb, var(--outline-variant) 30%, transparent);
+}
+
+.jui-auth-tab {
+    flex: 1;
+    padding: var(--space-md) var(--space-sm);
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--on-surface-variant);
+    cursor: pointer;
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.jui-auth-tab:hover {
+    color: var(--on-surface);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.jui-auth-tab--active {
+    color: var(--on-surface);
+    font-weight: 600;
+}
+
+.jui-auth-tab:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: -2px;
+}
+
+/* ---------------------------------- Form ---------------------------------- */
+
+.jui-auth-form {
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.jui-auth-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.jui-auth-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--on-surface-variant);
+}
+
+.jui-auth-label-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.jui-auth-forgot {
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.jui-auth-forgot:hover {
+    text-decoration: underline;
+}
+
+.jui-auth-input {
+    height: 40px;
+    padding: 0 14px;
+    background: var(--surface);
+    border: 1px solid color-mix(in srgb, var(--outline-variant) 50%, transparent);
+    border-radius: 0;
+    color: var(--on-surface);
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.jui-auth-input::placeholder {
+    color: #53505d;
+}
+
+.jui-auth-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 15%, transparent);
+}
+
+.jui-auth-error {
+    margin: 0;
+    font-size: 12px;
+    color: #ff8a8a;
+}
+
+/* -------------------------------- Submit btn ------------------------------- */
+
+.jui-auth-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    height: 44px;
+    background: var(--primary);
+    color: var(--on-primary);
+    border: none;
+    border-radius: 0;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.jui-auth-submit:hover {
+    background: #d8d3ff;
+}
+
+.jui-auth-submit:active {
+    transform: translateY(1px);
+}
+
+.jui-auth-submit:focus-visible {
+    outline: 2px solid var(--on-surface);
+    outline-offset: 2px;
+}
+
+/* --------------------------------- Divider --------------------------------- */
+
+.jui-auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.jui-auth-divider-line {
+    flex: 1;
+    height: 1px;
+    background: color-mix(in srgb, var(--outline-variant) 50%, transparent);
+}
+
+.jui-auth-divider-text {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--on-surface-variant);
+    opacity: 0.8;
+}
+
+/* --------------------------------- OAuth row -------------------------------- */
+
+.jui-auth-oauth-row {
+    display: flex;
+    gap: 10px;
+}
+
+.jui-auth-oauth-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    height: 42px;
+    background: transparent;
+    border: 1px solid color-mix(in srgb, var(--outline-variant) 50%, transparent);
+    border-radius: 0;
+    color: var(--on-surface);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.jui-auth-oauth-btn:hover {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: color-mix(in srgb, var(--outline-variant) 90%, transparent);
+}
+
+.jui-auth-oauth-btn:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* --------------------------------- Mobile ----------------------------------- */
+
+@media (max-width: 380px) {
+    .jui-auth-header {
+        padding: var(--space-lg) 18px 18px;
+    }
+
+    .jui-auth-form {
+        padding: 20px 18px;
+        gap: 18px;
+    }
+
+    .jui-auth-oauth-row {
+        flex-direction: column;
+    }
+}
+
+/* ------------------------------ Reduced motion ------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+    .jui-auth-tab,
+    .jui-auth-submit,
+    .jui-auth-oauth-btn,
+    .jui-auth-input {
+        transition: none;
+    }
+}
